@@ -4,12 +4,11 @@ var damage;
 
 function setup() {
   createCanvas(1600,400);
-  createSprite(400, 200, 50, 50);
   bulletSpeed=random(223,321);
   bulletWeight=random(30,52);
   bullet = createSprite(50,200,100,20);
-  bullet.shapeColor="white";
-  bullet.velocityX = speed;
+  bullet.shapeColor="blue";
+  bullet.velocityX = bulletSpeed;
   thickness = random(22,83);
   wall = createSprite(1200,200,thickness,100);
   wall.shapeColor = color(80,80,80);
@@ -32,4 +31,6 @@ function draw() {
     {
       wall.shapeColor="red";
     }
+    text("Damage : " + damage, 340,30);
+    
 }
